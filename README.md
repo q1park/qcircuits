@@ -13,7 +13,7 @@ circuitgrad.py - Contains functions for determining gate rotations via gradient 
 
 ### Notebook for reproducing https://arxiv.org/abs/1903.XXXX
 
-functions.py - Contains specialized functions for simulating the models in the paper below
+XYmodel_simulations.ipynb - Contains code for running all simulations and creating all plots that appear in the paper
 
-XYmodel_simulations.ipynb - Contains code for running all simulations and creating all plots that appear in the paper below
+functions.py - Contains specialized functions for simulating the models described in the paper
 
