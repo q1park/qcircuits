@@ -1,7 +1,8 @@
 # qcircuits
 Quantum Circuit Simulator
 
-example_usage.ipynb - Contains examples of the functionality for this simulator. Circuits are sparse matrices and states are sparse vectors.
+example_usage.ipynb - Contains examples of the functionality for this simulator. Circuits are sparse matrices and states are sparse vectors\\
+
 qctools.py - Creates a class object for building quantum circuits, evolving initial states, and outputting results in human-readable form
 gateset.py - Contains predefined standard gates for building quantum circuits
 circuitgrad.py - Contains functions for determining gate rotations via gradient descent
