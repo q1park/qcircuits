@@ -71,6 +71,12 @@ class CircuitTools(object):
         """Adds a new layer of gates to the existing circuit"""
         return np.dot(self.circuit, state_vector)
     
+    def set_zero(self):
+        """Prints circuit as pandas dataframe"""
+        tempmat = np.around( self.circuit, 3)
+        tempmat.eliminate_zeros()
+        return csc_matrix(tempmat)
+    
     def check_recover(self, state_vector):
         """Checks if the first qubit in a state tensor-factorizes"""
         logicalone=state_vector.todok()[:int(len(state_vector.todok().toarray())/2)]
@@ -84,10 +90,14 @@ class CircuitTools(object):
             return print("qubit 1 = logical zero")
         #return (logicalzero!=logicalone).nnz==0
     
+    def check_nnz(self):
+        """Prints circuit as pandas dataframe"""
+        return (self.set_zero()).nnz
+    
     def prettymatrix(self):
         """Prints circuit as pandas dataframe"""
-        circuit_np = np.array( np.around( self.circuit.todense(), 3))
-        return pd.DataFrame([[c if c.imag else c.real for c in b] for b in circuit_np])
+        prettymat = np.array(self.set_zero().todense())
+        return pd.DataFrame([[c if c.imag else c.real for c in b] for b in np.around(prettymat, 2)])
     
     def prettystate(self, state_vector):
         """Prints state as pandas dataframe"""
