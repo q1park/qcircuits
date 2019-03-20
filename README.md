@@ -1,5 +1,5 @@
 # qcircuits
-Quantum Circuit Simulator - Circuits are sparse matrices and states are sparse vectors
+## Quantum Circuit Simulator - Circuits are sparse matrices and states are sparse vectors
 
 example_usage.ipynb - Contains examples of the functionality for this simulator
 
