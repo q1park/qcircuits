@@ -11,7 +11,7 @@ gateset.py - Contains predefined standard gates for building quantum circuits
 
 circuitgrad.py - Contains functions for determining gate rotations via gradient descent
 
-### Notebook for reproducing https://arxiv.org/abs/1903.XXXX
+### Notebook for reproducing https://arxiv.org/abs/1903.08257
 
 XYmodel_simulations.ipynb - Contains code for running all simulations and creating all plots that appear in the paper
 
